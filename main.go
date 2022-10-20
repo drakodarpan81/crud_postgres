@@ -1,22 +1,24 @@
 package main
 
 import (
-	"crud_postgres/estudiantes"
+	"crud_postgres/estudiante"
 	"fmt"
 	"log"
 )
 
 func main() {
-	e := estudiantes.Estudiante{
+	e := estudiante.Estudiante{
 		Name:   "David",
 		Age:    40,
 		Active: true,
 	}
-	
-	err := estudiantes.EstudianteCrear(e)
+
+	err := estudiante.EstudianteCrear(e)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	//connection.Conexion()
 
 	fmt.Println("Creado exitosamente!!!")
 
